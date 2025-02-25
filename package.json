@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "aedes": "^0.51.3",
+    "firebase-admin": "^13.1.0",
     "mqtt": "^5.10.3"
   }
 }

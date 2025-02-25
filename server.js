@@ -4,7 +4,7 @@ const mqtt = require('mqtt');
 console.log("Starting MQTT client...");
 
 // Connect to the MQTT broker (replace with your broker's URL if needed)
-const client = mqtt.connect('mqtt://mosquitto:1883');
+const client = mqtt.connect('mqtt://192.168.189.69:1883');
 
 // When connected, log success and subscribe to the input topic
 client.on('connect', () => {
@@ -17,7 +17,7 @@ client.on('connect', () => {
     }
   });
 
-  client.publish('sensor/raw', "Fuck u", (err) => {
+  client.publish('sensor/raw', "Micro controller Published", (err) => {
     if (!err) {
       console.log(`Published processed data: Fuck u`);
     } else {
