@@ -10,15 +10,15 @@ services:
       - ./mosquitto.conf:/mosquitto/config/mosquitto.conf
     restart: always
 
-  node-server:
-    image: node:16-alpine
-    container_name: node-server
-    working_dir: /app
-    volumes:
-      - .:/app
-    command: sh -c "sleep 10 && node server.js"
-    depends_on:
-      - mosquitto
-    ports:
-      - "3000:3000"  # Adjust if your Node.js app uses a different port
-    restart: always
+  # node-server:
+  #   image: node:16-alpine
+  #   container_name: node-server
+  #   working_dir: /app
+  #   volumes:
+  #     - .:/app
+  #   command: sh -c "sleep 10 && node server.js"
+  #   depends_on:
+  #     - mosquitto
+  #   ports:
+  #     - "3000:3000"  # Adjust if your Node.js app uses a different port
+  #   restart: always
